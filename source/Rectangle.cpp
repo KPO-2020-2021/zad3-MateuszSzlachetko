@@ -200,6 +200,7 @@ bool operator==(const Rectangle &r1, const Rectangle &r2)
 
 std::ostream &operator<<(std::ostream &os, const Rectangle &r)
 {
+    os << std::setprecision(10) << std::fixed;
     os << r.vector1 << std::endl;
     os << r.vector2 << std::endl;
     os << r.vector3 << std::endl;
