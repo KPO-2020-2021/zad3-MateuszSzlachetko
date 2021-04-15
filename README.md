@@ -81,7 +81,7 @@ Implementacja wartości dla wierzchołków prostokątów ,oraz wizualizacja koli
 
 &nbsp;&nbsp; [test](test/) - zawiera pliki źródłowe testów\
 &nbsp;&nbsp; ├── [CMakeLists.txt](test/CMakeLists.txt) - cmake generujący makefile dla programu Rotation2D_tst\
-&nbsp;&nbsp; ├── [Matrix2x2-test.cpp](test/test3.cpp)\
+&nbsp;&nbsp; ├── [Matrix2x2-test.cpp](test/Matrix2x2-test.cpp)\
 &nbsp;&nbsp; ├── [Rectangle-test.cpp](test/Rectangle-test.cpp)\
 &nbsp;&nbsp; ├── [Vector2d-test.cpp](test/Vector2d-test.cpp)\
 &nbsp;&nbsp; └── [main.cpp](test/main.cpp) - plik main dla programu Rotation2D_tst
