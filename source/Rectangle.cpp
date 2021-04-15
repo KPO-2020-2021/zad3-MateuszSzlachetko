@@ -260,7 +260,6 @@ bool Rectangle::Check_Collision(Rectangle r2)
     //  .______
     //  |
     //  |
-    int overlaps = 0;
 
     Vector2D Axis1, Axis2, Axis3, Axis4;
     Axis1 = vector4 - vector1; // 4 1
@@ -292,8 +291,8 @@ bool Rectangle::Check_Collision(Rectangle r2)
     maxSecond = std::max(maxSecond, Projection3 * Axis1);
     maxSecond = std::max(maxSecond, Projection4 * Axis1);
 
-    if (minSecond <= maxFirst && maxSecond >= minFirst)
-        overlaps++;
+    if (!(minSecond <= maxFirst && maxSecond >= minFirst))
+        return false;
     //FIRST
 
     ProjectionA = Axis2 * ((vector4 * Axis2) / (Axis2.Length() * Axis2.Length()));
@@ -314,8 +313,8 @@ bool Rectangle::Check_Collision(Rectangle r2)
     maxSecond = std::max(maxSecond, Projection3 * Axis2);
     maxSecond = std::max(maxSecond, Projection4 * Axis2);
 
-    if (minSecond <= maxFirst && maxSecond >= minFirst)
-        overlaps++;
+    if (!(minSecond <= maxFirst && maxSecond >= minFirst))
+        return false;
     //SECOND
 
     ProjectionA = Axis3 * ((r2.vector1 * Axis3) / (Axis3.Length() * Axis3.Length()));
@@ -336,8 +335,8 @@ bool Rectangle::Check_Collision(Rectangle r2)
     maxSecond = std::max(maxSecond, Projection3 * Axis3);
     maxSecond = std::max(maxSecond, Projection4 * Axis3);
 
-    if (minSecond <= maxFirst && maxSecond >= minFirst)
-        overlaps++;
+    if (!(minSecond <= maxFirst && maxSecond >= minFirst))
+        return false;
     //THIRD
 
     ProjectionA = Axis4 * ((r2.vector1 * Axis4) / (Axis4.Length() * Axis4.Length()));
@@ -358,14 +357,11 @@ bool Rectangle::Check_Collision(Rectangle r2)
     maxSecond = std::max(maxSecond, Projection3 * Axis4);
     maxSecond = std::max(maxSecond, Projection4 * Axis4);
 
-    if (minSecond <= maxFirst && maxSecond >= minFirst)
-        overlaps++;
+    if (!(minSecond <= maxFirst && maxSecond >= minFirst))
+        return false;
     //FOURTH
 
-    if (overlaps == 4)
-        return true;
-    else
-        return false;
+    return true;
 }
 
 // bool Rectangle::Check_Collision(Rectangle r2)
