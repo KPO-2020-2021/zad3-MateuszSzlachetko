@@ -1,6 +1,6 @@
 # VECTOR2D
 
-```Java
+```c++
 class Vector2D
 
 
