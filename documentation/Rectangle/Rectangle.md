@@ -1,6 +1,6 @@
 # RECTANGLE
 
-```Java
+```c++
 class Rectangle
 
 private:
@@ -34,8 +34,8 @@ The created Rectangle object has it's vertices oriented in the following way
 
 ```
 	4. o____________o 3. Constructors are checking if input is valid
-	   |			| 	 if shape other than rectangle is passed
-	   | 			|    they will throw an exception.
+	   |		| 	 if shape other than rectangle is passed
+	   | 		|    they will throw an exception.
 	1. o____________o 2. Automatically assign correct value to expected corner
 ```
 
