@@ -1,6 +1,6 @@
 # MATRIX2x2
 
-```Java
+```c++
 class Matrix2x2
 
 
