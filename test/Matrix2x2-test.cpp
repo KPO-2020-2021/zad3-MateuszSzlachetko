@@ -1,6 +1,29 @@
 #include "gtest/gtest.h"
 #include "Matrix2x2.h"
 
+TEST(Matrix2x2_Determinant, test1)
+{
+    Matrix2x2 m(2, 1, 1, 1);
+
+    EXPECT_EQ(1, m.Determinant());
+
+    Matrix2x2 m2(2, 2, 1, -1);
+
+    EXPECT_EQ(-4, m2.Determinant());
+
+    Matrix2x2 m3(5, 5, 9, 8);
+
+    EXPECT_EQ(-5, m3.Determinant());
+
+    Matrix2x2 m4(2, 3, 1, 0);
+
+    EXPECT_EQ(-3, m4.Determinant());
+
+    Matrix2x2 m5(48, 55.5, 0, -13);
+
+    EXPECT_EQ(-624, m5.Determinant());
+}
+
 TEST(Matrix2x2_constructor, empty)
 {
     Matrix2x2 m1;

@@ -58,3 +58,34 @@ const Vector2D &Matrix2x2::operator[](int index) const
         throw std::invalid_argument("[Matrix2x2]Index out of range\n");
     }
 }
+
+double Matrix2x2::Determinant()
+{
+    double ratio, det = 1;
+    int i, j, k, size = 2;
+    double a[2][2] = {vector1[0], vector1[1], vector2[0], vector2[1]};
+
+    for (i = 0; i < size; i++)
+    {
+        if (a[i][i] == 0.0)
+        {
+            std::cout << "Mathematical Error!";
+            exit(0);
+        }
+        for (j = i + 1; j < size; j++)
+        {
+            ratio = a[j][i] / a[i][i];
+
+            for (k = 0; k <= size; k++)
+            {
+                a[j][k] = a[j][k] - ratio * a[i][k];
+            }
+        }
+    }
+    for (i = 0; i < size; i++)
+    {
+        det *= a[i][i];
+    }
+
+    return det;
+}

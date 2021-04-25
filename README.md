@@ -66,6 +66,10 @@ W programie zastosowałem oba rozszerzenia,animacje obrotów prostokąta z komun
 
 Implementacja wartości dla wierzchołków prostokątów ,oraz wizualizacja kolizji jest zaimplementowana z góry w funkcji main.Jednak można ją dowolnie zmodyfikować,podążając już za aktualną strukturą "menu".
 
+# Modyfikacja
+
+Zastosowana modyfikacja do obliczania wyznacznika metodą Gaussa jest testowana w testach dla macierzy 2x2.Gdyby była potrzeba użycia jej dla macierzy o większych rozmiarach,wystarczy zmienić odpowiednie zmienne.(size,wymiary tablicy "a" i dopisać pozostałe elementy)Dla macierzy 3x3 liczenie wyznacznika również zostało przetestowane(Algorytm działa dla dowolnej macierzy nxn).
+
 # Struktura repozytorium
 
 &nbsp;&nbsp; [source](source/) - folder z plikami źródłowymi\

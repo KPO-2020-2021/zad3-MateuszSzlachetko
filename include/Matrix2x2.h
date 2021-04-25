@@ -18,6 +18,8 @@ public:
     Vector2D operator*(const Vector2D &w);
     friend bool operator==(const Matrix2x2 &m1, const Matrix2x2 &m2);
     const Vector2D &operator[](int index) const;
+
+    double Determinant();
 };
 
 #endif // MATRIX2X2_H
