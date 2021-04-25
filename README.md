@@ -48,8 +48,8 @@ Jeżeli testy przebiegną pomyślnie program powinien zwrócić nastepujący kom
 
 ```js
 [----------] Global test environment tear-down
-[==========] 25 tests from 16 test suites ran. (x ms total)
-[  PASSED  ] 25 tests.
+[==========] 26 tests from 17 test suites ran. (x ms total)
+[  PASSED  ] 26 tests.
 ```
 
 Powyższy ciąg komend można wywołać jednorazowo wklejając poniższą komendę do terminala
